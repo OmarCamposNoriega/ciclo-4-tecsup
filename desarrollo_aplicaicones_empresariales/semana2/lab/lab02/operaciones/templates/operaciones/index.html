@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ titulo }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 40px;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #0b3954;
+            font-size: 24px;
+            border-bottom: 2px solid #0b3954;
+            padding-bottom: 10px;
+        }
+        .menu-link {
+            display: block;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+            font-weight: bold;
+            text-align: center;
+            transition: background 0.3s;
+        }
+        .menu-link:hover {
+            background: #0056b3;
+        }
+        .menu-link.secondary {
+            background: #6c757d;
+        }
+        .menu-link.secondary:hover {
+            background: #545b62;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Actividad 3: Casos de Estudio</h1>
+        <p>Seleccione el ejercicio que desea revisar:</p>
+        
+        <a class="menu-link" href="{% url 'operaciones:calculadora_form' %}">
+            1. Formulario de Operaciones Matemáticas (Suma, Resta, Multiplicación)
+        </a>
+        
+        <a class="menu-link" href="{% url 'operaciones:cilindro' %}">
+            2. Cálculo del Volumen de un Cilindro
+        </a>
+
+        <hr style="margin: 25px 0; border: none; border-top: 1px solid #ddd;">
+
+        <a class="menu-link secondary" href="{% url 'encuesta:index' %}">
+            Volver a la Actividad 2 (Encuesta)
+        </a>
+    </div>
+</body>
+</html>
